@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <script>
+      function quiz() {
+        let score = 0;
+
+        var ques1 = prompt(
+          "Mi Magyarország fővárosa? \nA - Bukarest\nB - Budapest\nC - Dubai\nD - Koppenhága\nAnswer: "
+        );
+        alert("A válaszod: " + ques1);
+
+        if (ques1.toUpperCase() === "B") {
+          score = score + 1;
+          alert("A válaszod helyes. " + score);
+        } else {
+          score = 0;
+          alert("A válaszod helytelen.");
+        }
+
+        var ques2 = prompt(
+          "Mi a kedvenc színed? \nA - Kék\nB - Zöld\nC - Piros\nD - Sárga\nAnswer: "
+        );
+        alert("A válaszod: " + ques2);
+
+        if (ques2.toUpperCase() === "A") {
+          score = score + 1;
+          alert("A válaszod helyes. " + score);
+        } else {
+          alert("A válaszod helytelen.");
+        }
+
+        var ques3 = prompt(
+          "Ki Magyország miniszterelnöke? \nA - Sztálin\nB - Orbán Viktor\nC - Magyar Péter\nD - Jómagam\nAnswer:"
+        );
+        alert("A válaszod: " + ques3);
+
+        if (ques3.toUpperCase() === "B") {
+          score = score + 1;
+          alert("A válaszod helyes. " + score);
+        } else {
+          alert("A válaszod helytelen.");
+        }
+
+        if (score >= 3) {
+          alert("Sikeresen kitöltötted a quizt! " + score);
+        } else {
+          alert("Sajnos nem lett elengedő pontod. :c " + score);
+        }
+      }
+      quiz();
+    </script>
+  </body>
+</html>
